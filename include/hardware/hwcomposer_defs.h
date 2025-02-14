@@ -295,6 +295,22 @@ enum {
      * to mark certain configs as similar and changing configs within a certain group
      * may be done seamlessly in some conditions. setActiveConfigWithConstraints. */
     HWC_DISPLAY_CONFIG_GROUP                = 7,
+    
+#ifdef USES_VIRTUAL_DISPLAY
+    /* In case of virtual display, HWC can be used even if there is no overlay layer.
+     * virtual display should know whether HWC is used or not.
+     */
+    HWC_DISPLAY_COMPOSITION_TYPE            = 8,
+
+    /* The format and usage can be changed by scenario in virtual display.
+     * virtual display should get the color format through HWC
+     */
+    HWC_DISPLAY_GLES_FORMAT                 = 9,
+    HWC_DISPLAY_SINK_BQ_FORMAT              = 10,
+    HWC_DISPLAY_SINK_BQ_USAGE               = 11,
+    HWC_DISPLAY_SINK_BQ_WIDTH               = 12,
+    HWC_DISPLAY_SINK_BQ_HEIGHT              = 13,
+#endif
 };
 
 /* Allowed events for hwc_methods::eventControl() */
