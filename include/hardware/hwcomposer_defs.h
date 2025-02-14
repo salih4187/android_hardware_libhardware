@@ -190,7 +190,7 @@ enum {
      * composition type of this layer, then the hwcomposer will allow async
      * position updates to this layer via setCursorPositionAsync().
      */
-    HWC_IS_CURSOR_LAYER = 0x00000002
+    HWC_IS_CURSOR_LAYER = 0x00000002,
     
     /*
      * HWC_SCREENSHOT_ANIMATOR_LAYER is set by surfaceflinger to indicate
